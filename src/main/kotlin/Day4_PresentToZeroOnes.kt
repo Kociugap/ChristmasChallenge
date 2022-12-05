@@ -6,7 +6,7 @@ fun main() {
         "Hat", "Tea", "Coffee", "Clock", "Bag",
         "Book", "Wallet", "Cream", "Earrings"
     )
-    gifts.map { gift ->
+    gifts.forEach { gift ->
         print("$gift ")
         gift.toByteArray(Charset.defaultCharset()).map { byte -> print("${Integer.toBinaryString(byte.toInt())} ") }
         println()
