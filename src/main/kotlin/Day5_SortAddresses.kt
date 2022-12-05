@@ -1,6 +1,6 @@
 fun main() {
-    val sorted = prepareAddresses().sortedBy { address -> address.city }
-    println(sorted)
+    val sortedAddresses = prepareAddresses().sortedBy { address -> address.city }
+    println(sortedAddresses)
 }
 
 private fun prepareAddresses(): List<Address> {
