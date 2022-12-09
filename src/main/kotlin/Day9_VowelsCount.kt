@@ -1,8 +1,8 @@
 package main.kotlin
 
 fun main() {
-    val vowels = setOf('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'y', 'Y', 'u', 'U')
-    val remaining = prepareAddresses().joinToString("") { it.street }.count { char -> char in vowels }
+    val vowels = setOf('a', 'e', 'i', 'o', 'y', 'u')
+    val remaining = prepareAddresses().joinToString("") { it.street.lowercase() }.count { char -> char in vowels }
     println(remaining * 2)
 }
 
